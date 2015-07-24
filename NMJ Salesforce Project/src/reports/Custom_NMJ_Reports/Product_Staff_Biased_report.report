@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report xmlns="http://soap.sforce.com/2006/04/metadata">
+    <aggregates>
+        <acrossGroupingContext>GRAND_SUMMARY</acrossGroupingContext>
+        <calculatedFormula>RowCount/PARENTGROUPVAL(RowCount, ROW_GRAND_SUMMARY, COLUMN_GRAND_SUMMARY)</calculatedFormula>
+        <datatype>percent</datatype>
+        <description>% Shown</description>
+        <developerName>FORMULA1</developerName>
+        <downGroupingContext>Opportunity.OpportunityLineItems$PricebookEntry.Product2</downGroupingContext>
+        <isActive>true</isActive>
+        <isCrossBlock>false</isCrossBlock>
+        <masterLabel>% Shown</masterLabel>
+        <scale>0</scale>
+    </aggregates>
+    <buckets>
+        <bucketType>number</bucketType>
+        <developerName>BucketField_79325245</developerName>
+        <masterLabel>Same price range products</masterLabel>
+        <nullTreatment>z</nullTreatment>
+        <sourceColumnName>Opportunity.OpportunityLineItems$PricebookEntry.UnitPrice</sourceColumnName>
+        <useOther>false</useOther>
+        <values>
+            <sourceValues>
+                <to>300,000</to>
+            </sourceValues>
+            <value>2 to 3 Lakhs</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>300,000</from>
+                <to>500,000</to>
+            </sourceValues>
+            <value>3 to 5 Lakha</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>500,000</from>
+                <to>800,000</to>
+            </sourceValues>
+            <value>5 to 8 Lakhs</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>800,000</from>
+                <to>1,200,000</to>
+            </sourceValues>
+            <value>8 to 12 Lakhs</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>1,200,000</from>
+                <to>1,800,000</to>
+            </sourceValues>
+            <value>12 to 18 Lakhs</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>1,800,000</from>
+                <to>2,500,000</to>
+            </sourceValues>
+            <value>18 to 25 Lakhs</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>2,500,000</from>
+                <to>3,500,000</to>
+            </sourceValues>
+            <value>25 to 35 Lakhs</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>3,500,000</from>
+                <to>4,500,000</to>
+            </sourceValues>
+            <value>35 to 45 Lakhs</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>4,500,000</from>
+                <to>6,000,000</to>
+            </sourceValues>
+            <value>45 to 60 Lakhs</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>6,000,000</from>
+                <to>8,000,000</to>
+            </sourceValues>
+            <value>60 to 80 Lakhs</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>8,000,000</from>
+                <to>10,000,000</to>
+            </sourceValues>
+            <value>80 to 1 Crore</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>10,000,000</from>
+                <to>12,500,000</to>
+            </sourceValues>
+            <value>1 crore to 1.25 crore</value>
+        </values>
+        <values>
+            <sourceValues>
+                <from>12,500,000</from>
+            </sourceValues>
+            <value>1.25 crore and above</value>
+        </values>
+    </buckets>
+    <chart>
+        <backgroundColor1>#FFFFFF</backgroundColor1>
+        <backgroundColor2>#FFFFFF</backgroundColor2>
+        <backgroundFadeDir>Diagonal</backgroundFadeDir>
+        <chartSummaries>
+            <axisBinding>y</axisBinding>
+            <column>RowCount</column>
+        </chartSummaries>
+        <chartType>LineGrouped</chartType>
+        <enableHoverLabels>true</enableHoverLabels>
+        <expandOthers>true</expandOthers>
+        <groupingColumn>Opportunity.OpportunityLineItems$PricebookEntry.Product2</groupingColumn>
+        <legendPosition>Right</legendPosition>
+        <location>CHART_TOP</location>
+        <secondaryGroupingColumn>Opportunity$CreatedBy</secondaryGroupingColumn>
+        <showAxisLabels>true</showAxisLabels>
+        <showPercentage>false</showPercentage>
+        <showTotal>false</showTotal>
+        <showValues>false</showValues>
+        <size>Medium</size>
+        <summaryAxisRange>Auto</summaryAxisRange>
+        <textColor>#000000</textColor>
+        <textSize>12</textSize>
+        <titleColor>#000000</titleColor>
+        <titleSize>18</titleSize>
+    </chart>
+    <columns>
+        <field>Opportunity$Name</field>
+    </columns>
+    <description>Sales staff bias refers to tendency to push certain designs to the others based on personal judgment that those designs are better. Sales staff bias can be analyzed and steps can be taken to eliminate basis the report shown below.</description>
+    <filter>
+        <criteriaItems>
+            <column>BucketField_79325245</column>
+            <operator>equals</operator>
+            <value>8 to 12 Lakhs,12 to 18 Lakhs,18 to 25 Lakhs,25 to 35 Lakhs,35 to 45 Lakhs,45 to  60 Lakhs,60 to 80 Lakhs,80 to 1 Crore</value>
+        </criteriaItems>
+    </filter>
+    <format>Matrix</format>
+    <groupingsAcross>
+        <dateGranularity>Day</dateGranularity>
+        <field>BucketField_79325245</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsAcross>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity$CreatedBy</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <groupingsDown>
+        <dateGranularity>Day</dateGranularity>
+        <field>Opportunity.OpportunityLineItems$PricebookEntry.Product2</field>
+        <sortOrder>Asc</sortOrder>
+    </groupingsDown>
+    <name>7.5 Product/Staff Biased report</name>
+    <params>
+        <name>co</name>
+        <value>1</value>
+    </params>
+    <reportType>Staff_Biased_report__c</reportType>
+    <scope>organization</scope>
+    <showDetails>false</showDetails>
+    <timeFrameFilter>
+        <dateColumn>Opportunity$CloseDate</dateColumn>
+        <interval>INTERVAL_CUSTOM</interval>
+    </timeFrameFilter>
+</Report>
